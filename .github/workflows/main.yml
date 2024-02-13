@@ -1,0 +1,31 @@
+name: Build and Deploy IMC
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+
+      - name: Build the application
+        run: dotnet build --configuration Release
+        working-directory: ./Imc
+
+      - name: Publish Blazor WebAssembly application
+        run: dotnet publish --no-restore -c Release
+        working-directory: ./Imc
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./bin/Release/net8.0/publish/wwwroot
