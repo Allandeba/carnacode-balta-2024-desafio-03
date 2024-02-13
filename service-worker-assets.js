@@ -33,7 +33,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-5jP6abQJom+2U0aVrtIfrJtQdeWKo3aDEEBx6FfpLrg=",
+      "hash": "sha256-WFkOdOT2Lboc4e0e9lx7+ijC9dmrgVGGLeZz9wcSmP4=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -41,7 +41,7 @@
       "url": "_framework\/Blazored.LocalStorage.wasm"
     },
     {
-      "hash": "sha256-AiORX8Sh0ZtZcFd0xgqAlD3m0DjW27T\/Xj+8nSKFbko=",
+      "hash": "sha256-Ke8sYf\/sXCFtML8paFFQiAsBspjqE1JOtYzZ+HKywBw=",
       "url": "_framework\/Imc.wasm"
     },
     {
@@ -693,7 +693,7 @@
       "url": "img\/windows11\/Wide310x150Logo.scale-400.png"
     },
     {
-      "hash": "sha256-5FlBstJbEMaYJ5NqWcv451mr3RBgTPLnDhK6DYoBI7E=",
+      "hash": "sha256-m\/XE4ZmZnZpgNWrEikF7tSddoduNkPM5V3AqbQTTf7M=",
       "url": "index.html"
     },
     {
@@ -701,5 +701,5 @@
       "url": "manifest.webmanifest"
     }
   ],
-  "version": "c8E98\/DA"
+  "version": "bsf36jNc"
 };
