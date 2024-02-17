@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Imc.Shared.Enums;
-using static Imc.Shared.Constants.Constants;
+using static Imc.Shared.Constants.MessageConstants;
+using static Imc.Shared.Constants.TimeConstants;
 
 namespace Imc.Models;
 
@@ -25,15 +26,23 @@ public class ImcCalculator
     private DateTime CreatedDateTime = DateTime.UtcNow;
     public string AddedTime {
         get {
+            const string sameMessage = "atrás";
             TimeSpan diff = DateTime.UtcNow - CreatedDateTime;
-            if (diff.Minutes < 1)
-                return $"{diff.Seconds}s atrás";
 
-            if (diff.TotalHours < 1)
-                return $"{diff.Minutes}m atrás";
+            if (diff.TotalMinutes < Minute)
+                return $"{diff.Seconds}s {sameMessage}";
 
-            if (diff.TotalHours >= 1)
-                return $"{diff.Hours}h atrás";
+            if (diff.TotalHours < Hour)
+                return $"{diff.Minutes}m {sameMessage}";
+
+            if (diff.TotalDays < 1)
+                return $"{diff.Hours}h {sameMessage}";
+
+            if (diff.TotalDays == 1)
+                return $"{diff.TotalDays} dia {sameMessage}";
+
+            if (diff.TotalDays > 1)
+                return $"{diff.TotalDays} dias {sameMessage}";
 
             return diff.ToString("dd/MM/yyyy");
         }
