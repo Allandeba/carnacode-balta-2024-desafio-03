@@ -160,8 +160,8 @@ main[b-3ardxbos7j] {
         overflow-y: auto;
     }
 }
-/* /Pages/Components/ImcCalculator.razor.rz.scp.css */
-.btn-primary[b-38edju4hrw] {
+/* /Pages/ImcCalculator/Components/ImcCalculatorForm.razor.rz.scp.css */
+.btn-primary[b-6impgitcsh] {
   color: #000;
   background-color: #45fefe;
   border: none;
@@ -169,8 +169,8 @@ main[b-3ardxbos7j] {
   margin-bottom: 10px;
   font-weight: bold;
 }
-/* /Pages/ImcCalculator.razor.rz.scp.css */
-.btn-secondary[b-7okk3qnex9] {
+/* /Pages/ImcCalculator/ImcCalculator.razor.rz.scp.css */
+.btn-secondary[b-hc8xgk2h37] {
   color: #000;
   background-color: transparent;
   border: 3px solid #45fefe;
