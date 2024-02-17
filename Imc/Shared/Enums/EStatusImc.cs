@@ -1,4 +1,4 @@
-namespace Imc.Models.Enums;
+namespace Imc.Shared.Enums;
 
 public enum EStatusImc
 {

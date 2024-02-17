@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Imc.Models.Enums;
+namespace Imc.Shared.Enums;
 
-public enum EGenero
+public enum EGender
 {
     [Display(Name = "Não informado")]
     NaoInformado,
