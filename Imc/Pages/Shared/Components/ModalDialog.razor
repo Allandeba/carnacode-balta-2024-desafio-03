@@ -29,9 +29,11 @@
 
 
 @code {
+    [EditorRequired]
     [Parameter]
     public string Title { get; set; } = string.Empty;
 
+    [EditorRequired]
     [Parameter]
     public string Body { get; set; } = string.Empty;
 
@@ -41,6 +43,7 @@
     [Parameter]
     public RenderFragment? ChildContent { get; set; }
 
+    [EditorRequired]
     [Parameter]
     public bool ShowModal { get; set; } = false;
 
