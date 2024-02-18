@@ -48,4 +48,6 @@ public class ImcCalculator
             return diff.ToPtBR();
         }
     }
+
+    public bool IsValid() => Height.HasValue && Weight.HasValue;
 }

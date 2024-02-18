@@ -54,7 +54,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        ModelList = await LocalStorage.GetItemAsync<List<ImcCalculator>>("ImcList");
+        ModelList = await LocalStorage.GetItemAsync<List<ImcCalculator>>(StorageConstants.Key);
         if (ModelList != null)
             ModelList.Reverse();
 

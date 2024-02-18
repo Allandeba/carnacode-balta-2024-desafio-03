@@ -45,10 +45,9 @@
 
     private async Task SalvarHistoricoAsync()
     {
-        var imcList = await LocalStorage.GetItemAsync<List<Imc.Models.ImcCalculator>>("ImcList") ?? new List<Imc.Models.ImcCalculator>();
+        var imcList = await LocalStorage.GetItemAsync<List<Imc.Models.ImcCalculator>>(StorageConstants.Key) ?? new List<Imc.Models.ImcCalculator>();
         imcList.Add(Imc);
-        await LocalStorage.SetItemAsync("ImcList", imcList);
-        ToHistoryPage();
-        return;
+        await LocalStorage.SetItemAsync(StorageConstants.Key, imcList);
+        await ToHistoryPageAsync();
     }
 }
