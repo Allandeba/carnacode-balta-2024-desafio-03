@@ -36,12 +36,14 @@
 
     protected override async Task<Task> OnAfterRenderAsync(bool firstRender)
     {
-        await HideModalAsync();
+        if (firstRender)
+            await HideModalAsync();
         return base.OnAfterRenderAsync(firstRender);
     }
 
     public string Title { get; set; } = string.Empty;
     public string Body { get; set; } = string.Empty;
+
     public async Task ShowModalAsync() => await JsRuntime.InvokeVoidAsync("showModal", "modalDialog");
     public async Task HideModalAsync() => await JsRuntime.InvokeVoidAsync("hideModal", "modalDialog");
 
