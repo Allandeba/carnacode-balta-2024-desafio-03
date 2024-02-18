@@ -1,5 +1,6 @@
 ﻿@page "/imc"
 @using Imc.Pages.ImcCalculator.Components
+@using Imc.Services;
 
 <PageTitle>Cálculo de IMC</PageTitle>
 
@@ -33,7 +34,8 @@
 
     private void CalcularImc()
     {
-        var result = Imc.Calculate();
+        var ImcCalculatorService = new ImcCalculatorService();
+        var result = ImcCalculatorService.Calculate(Imc);
         Title = result.Icon + ' ' + result.Title;
         Body = result.Body;
         StateHasChanged();
