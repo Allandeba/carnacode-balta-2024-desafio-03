@@ -15,7 +15,7 @@ public class ImcCalculator
 
     [Required(ErrorMessage = RequiredMessage)]
     [Range(0, 300, ErrorMessage = RangeMessage)]
-    public int? Weight { get; set; }
+    public double? Weight { get; set; }
 
     [Required(ErrorMessage = RequiredMessage)]
     public bool Older { get; set; }

@@ -7,11 +7,11 @@
 
         <div class="d-flex flex-column">
             <div class="mb-3">
-                <InputNumber type="number" class="form-control" @bind-Value="Model.Height" placeholder="Altura (metros)" />
+                <InputNumber type="number" step="1" class="form-control" @bind-Value="Model.Height" placeholder="Altura (metros)" />
             </div>
 
             <div class="mb-3">
-                <InputNumber type="number" class="form-control" @bind-Value="Model.Weight" placeholder="Peso (kg)" />
+                <InputNumber type="number" step="0.1" class="form-control" @bind-Value="Model.Weight" placeholder="Peso (kg)" />
             </div>
 
             <div class="mb-3">
