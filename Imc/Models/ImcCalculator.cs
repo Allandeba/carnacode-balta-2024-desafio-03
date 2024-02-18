@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using Imc.Shared.Enums;
+using Imc.Extensions;
 using static Imc.Shared.Constants.MessageConstants;
 using static Imc.Shared.Constants.TimeConstants;
 
@@ -44,7 +45,7 @@ public class ImcCalculator
             if (diff.TotalDays > 1)
                 return $"{diff.TotalDays} dias {sameMessage}";
 
-            return diff.ToString("dd/MM/yyyy");
+            return diff.ToPtBR();
         }
     }
 }
