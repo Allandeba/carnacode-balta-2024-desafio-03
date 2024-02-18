@@ -19,8 +19,7 @@
         {
             @foreach (var item in FilteredModelList)
             {
-                var imcCalculatorService = new ImcCalculatorService();
-                var imcResult = imcCalculatorService.Calculate(item);
+                var imcResult = ImcCalculatorService.Calculate(item);
                 <div class="list-group-item border-0">
                     <div class="d-flex">
                         <img class="img-thumbnail me-3" alt="Histórico" src="icon-no-bg.png" style="height: 64px; width: 64px;">
@@ -48,6 +47,7 @@
 </div>
 
 @code {
+    [Inject] private IImcCalculatorService ImcCalculatorService { get; set; } = null!;
     private Models.ImcHistorySearch Model { get; set; } = new();
     private List<ImcCalculator>? ModelList { get; set; }
     private List<ImcCalculator>? FilteredModelList { get; set; }
@@ -70,8 +70,7 @@
         }
         else
         {
-            var imcCalculatorService = new ImcCalculatorService();
-            FilteredModelList = ModelList!.Where(x => imcCalculatorService.Calculate(x).Title.ToLower().Contains(Model.Search.ToLower())).ToList();
+            FilteredModelList = ModelList!.Where(x => ImcCalculatorService.Calculate(x).Title.ToLower().Contains(Model.Search.ToLower())).ToList();
 
         }
     }

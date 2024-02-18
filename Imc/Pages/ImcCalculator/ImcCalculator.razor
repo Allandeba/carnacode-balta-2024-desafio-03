@@ -13,8 +13,8 @@
 </ModalDialog>
 
 @code {
-    [Inject]
-    private IJSRuntime JsRuntime { get; set; } = null!;
+    [Inject] private IJSRuntime JsRuntime { get; set; } = null!;
+    [Inject] private IImcCalculatorService ImcCalculatorService { get; set; } = null!;
     private Imc.Models.ImcCalculator Imc { get; set; } = new();
     private ModalDialog _modalDialog = null!;
 
@@ -31,8 +31,7 @@
 
     private async Task CalculteImc()
     {
-        var imcCalculatorService = new ImcCalculatorService();
-        var result = imcCalculatorService.Calculate(Imc);
+        var result = ImcCalculatorService.Calculate(Imc);
         _modalDialog.Title = result.DisplayTitle;
         _modalDialog.Body = result.Body;
         await _modalDialog.ShowModalAsync();

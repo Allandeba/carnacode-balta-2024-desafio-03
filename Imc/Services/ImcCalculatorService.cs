@@ -3,15 +3,22 @@ using Imc.Shared.Enums;
 
 namespace Imc.Services;
 
-public class ImcCalculatorService
+public interface IImcCalculator
 {
-    public ImcResult Calculate(ImcCalculator imc)
+    ImcResult Calculate(ImcCalculator imcCalculator);
+}
+
+public interface IImcCalculatorService : IImcCalculator;
+
+public class ImcCalculatorService : IImcCalculatorService
+{
+    public ImcResult Calculate(ImcCalculator imcCalculator)
     {
-        if (!(imc.Height.HasValue && imc.Weight.HasValue))
+        if (!imcCalculator.IsValid())
             throw new Exception("Passou na validação do modelo e não deveria ter passado!");
 
-        double HeightInMeters = imc.Height.Value / 100.0;
-        double result = imc.Weight.Value / (HeightInMeters * HeightInMeters);
+        double HeightInMeters = imcCalculator.Height.Value / 100.0;
+        double result = imcCalculator.Weight.Value / (HeightInMeters * HeightInMeters);
         return GetImcResult(result);
     }
 
