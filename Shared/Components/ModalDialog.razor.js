@@ -1,11 +1,9 @@
 window.showModal = (id) => {
     let el = document.getElementById(id);
-    el.showModal();
+    el.style.display = "block";
 }
 
 window.hideModal = (id) => {
     let el = document.getElementById(id);
-    console.log(el);
-    el.remove();
-    console.log(el);
+    el.style.display = "none";
 }
