@@ -1,4 +1,4 @@
-<EditForm Model="Model" OnValidSubmit="Calculate" FormName="Calculator">
+<EditForm Model="Model" OnValidSubmit="OnValidSubmitAsync" FormName="Calculator">
     <div class="container col-md-4">
         <h1 class="text-center mb-3">Cálculo de IMC</h1>
         
@@ -44,4 +44,13 @@
     
     [Parameter]
     public EventCallback Calculate { get; set; }
+
+    private async Task OnValidSubmitAsync()
+    {
+        if (!Calculate.HasDelegate)
+            return;
+            
+        Model.CreatedDateTime = DateTime.UtcNow;
+        await Calculate.InvokeAsync();
+    }
 }

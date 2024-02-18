@@ -23,7 +23,7 @@ public class ImcCalculator
     [Required(ErrorMessage = RequiredMessage)]
     public EGender Gender { get; set; } = EGender.NaoInformado;
 
-    public DateTime CreatedDateTime { get; set; } = DateTime.UtcNow;
+    public DateTime CreatedDateTime { get; set; } = DateTime.MinValue;
     public string AddedTime {
         get {
             const string sameMessage = "atrás";
