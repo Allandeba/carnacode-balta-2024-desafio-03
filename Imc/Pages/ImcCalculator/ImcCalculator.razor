@@ -1,49 +1,44 @@
 ﻿@page "/imc"
-@using Imc.Pages.ImcCalculator.Components
 @using Imc.Services;
+@using Imc.Pages.ImcCalculator.Components
 
 <PageTitle>Cálculo de IMC</PageTitle>
 
-<ImcCalculatorForm Model="Imc" Calculate="CalcularImc">
-    <button type="button" class="btn btn-secondary" @onclick="ToCalcExplicationPage">Entenda o cálculo</button>
+<ImcCalculatorForm Model="Imc" CalculateCallback="@CalculteImc">
+    <button type="button" class="btn btn-secondary" @onclick="ToCalcExpanationPage">Entenda o cálculo</button>
 </ImcCalculatorForm>
 
-<ModalDialog Title="@Title" Body="@Body" ConfirmationButton="SalvarHistoricoAsync" ShowModal="ShowModal">
-    <button type="button" class="btn btn-secondary" @onclick="ToHistoryPage">Ver meu histórico</button>
+<ModalDialog ConfirmationActionCallback="SaveHistoryAsync" @ref="_modalDialog">
+    <button type="button" class="btn btn-secondary" @onclick="ToHistoryPageAsync">Ver meu histórico</button>
 </ModalDialog>
 
 @code {
     [Inject]
-    private IJSRuntime JSRuntime { get; set; } = null!;
+    private IJSRuntime JsRuntime { get; set; } = null!;
     private Imc.Models.ImcCalculator Imc { get; set; } = new();
-    private bool ShowModal = false;
-    private string Title = String.Empty;
-    private string Body = String.Empty;
+    private ModalDialog _modalDialog = null!;
 
-    private async Task ToCalcExplicationPage()
+    private async Task ToCalcExpanationPage()
     {
-        await JSRuntime.InvokeAsync<object>("open", "https://www.unimedcampinas.com.br/blog/cuidado-continuo/entenda-o-que-e-calculo-imc-e-para-que-serve", "_blank");
-        return;
+        await JsRuntime.InvokeAsync<object>("open", "https://www.unimedcampinas.com.br/blog/cuidado-continuo/entenda-o-que-e-calculo-imc-e-para-que-serve", "_blank");
     }
 
-    private void ToHistoryPage()
+    private async Task ToHistoryPageAsync()
     {
+        await _modalDialog.HideModalAsync();
         NavigationManager.NavigateTo("history");
-        return;
     }
 
-    private void CalcularImc()
+    private async Task CalculteImc()
     {
-        var ImcCalculatorService = new ImcCalculatorService();
-        var result = ImcCalculatorService.Calculate(Imc);
-        Title = result.Icon + ' ' + result.Title;
-        Body = result.Body;
-        StateHasChanged();
-        ShowModal = true;
-        return;
+        var imcCalculatorService = new ImcCalculatorService();
+        var result = imcCalculatorService.Calculate(Imc);
+        _modalDialog.Title = result.DisplayTitle;
+        _modalDialog.Body = result.Body;
+        await _modalDialog.ShowModalAsync();
     }
 
-    private async Task SalvarHistoricoAsync()
+    private async Task SaveHistoryAsync()
     {
         var imcList = await LocalStorage.GetItemAsync<List<Imc.Models.ImcCalculator>>(StorageConstants.Key) ?? new List<Imc.Models.ImcCalculator>();
         imcList.Add(Imc);

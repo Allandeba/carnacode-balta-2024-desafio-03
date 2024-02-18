@@ -7,7 +7,7 @@
 
         <div class="d-flex flex-column">
             <div class="mb-3">
-                <InputNumber type="number" step="1" class="form-control" @bind-Value="Model.Height" placeholder="Altura (metros)" />
+                <InputNumber type="number" step="1" class="form-control" @bind-Value="Model.Height" placeholder="Altura (centimetros)" />
             </div>
 
             <div class="mb-3">
@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary mb-2" @onclick="Calculate">Calcular meu IMC</button>
+            <button type="submit" class="btn btn-primary mb-2" @onclick="CalculateCallback">Calcular meu IMC</button>
             @ChildContent
         </div>
     </div>
@@ -45,11 +45,11 @@
     
     [EditorRequired]
     [Parameter]
-    public EventCallback Calculate { get; set; }
+    public EventCallback CalculateCallback { get; set; }
 
     private async Task OnValidSubmitAsync()
     {
         Model.CreatedDateTime = DateTime.UtcNow;
-        await Calculate.InvokeAsync();
+        await CalculateCallback.InvokeAsync();
     }
 }
