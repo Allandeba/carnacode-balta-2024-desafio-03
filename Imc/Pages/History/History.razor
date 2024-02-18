@@ -19,8 +19,8 @@
         {
             @foreach (var item in FilteredModelList)
             {
-                var ImcCalculatorService = new ImcCalculatorService();
-                var ImcResult = ImcCalculatorService.Calculate(item);
+                var imcCalculatorService = new ImcCalculatorService();
+                var imcResult = imcCalculatorService.Calculate(item);
                 <div class="list-group-item border-0">
                     <div class="d-flex">
                         <img class="img-thumbnail me-3" alt="Histórico" src="icon-no-bg.png" style="height: 64px; width: 64px;">
@@ -28,12 +28,12 @@
                         <div class="row">
                             <div class="col">
                                 <div class="d-flex flex-grow-1">
-                                    <h6 class="text-start fw-bold me-2">@ImcResult.Title @ImcResult.Icon</h6>
+                                    <h6 class="text-start fw-bold me-2">@imcResult.Title @imcResult.Icon</h6>
                                     <span class="text-muted ms-auto">@item.AddedTime</span>
                                 </div>
                             </div>
 
-                            <h6>@ImcResult.Body</h6>
+                            <h6>@imcResult.Body</h6>
                             <hr />
                         </div>
                     </div>
@@ -70,8 +70,8 @@
         }
         else
         {
-            var ImcCalculatorService = new ImcCalculatorService();
-            FilteredModelList = ModelList!.Where(x => ImcCalculatorService.Calculate(x).Title.ToLower().Contains(Model.Search.ToLower())).ToList();
+            var imcCalculatorService = new ImcCalculatorService();
+            FilteredModelList = ModelList!.Where(x => imcCalculatorService.Calculate(x).Title.ToLower().Contains(Model.Search.ToLower())).ToList();
 
         }
     }
