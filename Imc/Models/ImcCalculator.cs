@@ -9,8 +9,6 @@ namespace Imc.Models;
 
 public class ImcCalculator
 {
-    public Guid Guid { get; set; } = Guid.NewGuid();
-
     [Required(ErrorMessage = RequiredMessage)]
     [Display(Name= "Altura")]
     [Range(0, 300, ErrorMessage = RangeMessage)]
