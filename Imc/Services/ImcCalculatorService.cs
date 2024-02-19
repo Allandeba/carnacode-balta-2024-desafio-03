@@ -17,8 +17,8 @@ public class ImcCalculatorService : IImcCalculatorService
         if (!imcCalculator.IsValid())
             throw new Exception("Passou na validação do modelo e não deveria ter passado!");
 
-        double HeightInMeters = imcCalculator.Height.Value / 100.0;
-        double result = imcCalculator.Weight.Value / (HeightInMeters * HeightInMeters);
+        double heightInMeters = imcCalculator.Height!.Value / 100.0;
+        double result = imcCalculator.Weight!.Value / (heightInMeters * heightInMeters);
         return GetImcResult(result);
     }
 
