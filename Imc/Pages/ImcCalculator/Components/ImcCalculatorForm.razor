@@ -1,3 +1,4 @@
+@using Imc.Extensions
 <EditForm Model="Model" OnValidSubmit="OnValidSubmitAsync" FormName="Calculator">
     <div class="container col-md-4">
         <h1 class="text-center mb-3">Cálculo de IMC</h1>
@@ -16,9 +17,10 @@
 
             <div class="mb-3">
                 <InputSelect class="form-select" @bind-Value="Model.Gender">
-                    <option value="@EGender.NaoInformado">Não Informado</option>
-                    <option value="@EGender.Masculino">Masculino</option>
-                    <option value="@EGender.Feminino">Feminino</option>
+                    @foreach (var gender in Enum.GetValues<EGender>())
+                    {
+                        <option value="@gender">@gender.GetDisplayName()</option>   
+                    }
                 </InputSelect>
             </div>
 
