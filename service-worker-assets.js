@@ -33,7 +33,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-o4dpffRpE5RFSB+xcjk+usEcP3AQZrXBSCLBcjhzfEU=",
+      "hash": "sha256-RxpU0G3Ybf8tDhoc07jZ2zGj5SzOz01dP1+HM7OUHTA=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -41,7 +41,7 @@
       "url": "_framework\/Blazored.LocalStorage.wasm"
     },
     {
-      "hash": "sha256-vIhbiev\/n4Kfl6f7WAOLKWlhHyLQc3ekb8tLm2Tk0Xk=",
+      "hash": "sha256-YWkCNcMUwidTCMoD\/ccZd\/jeHLwljvsTo0pqVF302fc=",
       "url": "_framework\/Imc.wasm"
     },
     {
@@ -165,7 +165,7 @@
       "url": "_framework\/System.ObjectModel.wasm"
     },
     {
-      "hash": "sha256-OIYsAaM0R3afPgCj82Fey3Ip8dZAoAH373pUudDbsO8=",
+      "hash": "sha256-ZdmkE9l6C\/0OpDGTHSjCWBfHsYycGIuVC4Dn082MVrQ=",
       "url": "_framework\/System.Private.CoreLib.wasm"
     },
     {
@@ -181,7 +181,7 @@
       "url": "_framework\/System.Runtime.Serialization.Primitives.wasm"
     },
     {
-      "hash": "sha256-dLgVsBcDHQpicqV42dQ2lnIyTlPETdjqRGC2V8Ll9CI=",
+      "hash": "sha256-yRi6QCOUStBL\/DjY36eOK5KSnuLGr9cB8FzME90xs70=",
       "url": "_framework\/System.Runtime.wasm"
     },
     {
@@ -801,5 +801,5 @@
       "url": "manifest.webmanifest"
     }
   ],
-  "version": "Yu6UXis1"
+  "version": "31xHUxAL"
 };
