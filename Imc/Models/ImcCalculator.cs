@@ -39,14 +39,14 @@ public class ImcCalculator
             if (diff.TotalHours < Hour)
                 return $"{diff.Minutes}m {sameMessage}";
 
-            if (diff.TotalDays < 1)
+            if (diff.Days < 1)
                 return $"{diff.Hours}h {sameMessage}";
 
-            if (diff.TotalDays == 1)
-                return $"{diff.TotalDays} dia {sameMessage}";
+            if (diff.Days == 1)
+                return $"{diff.Days} dia {sameMessage}";
 
-            if (diff.TotalDays > 1)
-                return $"{diff.TotalDays} dias {sameMessage}";
+            if (diff.Days > 1)
+                return $"{diff.Days} dias {sameMessage}";
 
             return diff.ToPtBR();
         }
