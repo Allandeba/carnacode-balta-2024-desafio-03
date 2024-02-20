@@ -1,0 +1,71 @@
+@using Imc.Services
+<EditForm Model="ImcHistorySearch" OnValidSubmit="OnValidSubmit" FormName="PesquisarHistorico">
+    <InputText class="form-control mb-3" @bind-Value="ImcHistorySearch.Search" placeholder="Pesquisar..." />
+</EditForm>
+
+<div class="list-group list-group-flush align-items-center">
+    @if (FilteredList is not null && FilteredList!.Any())
+    {
+        @foreach (var item in FilteredList!)
+        {
+            var imcResult = ImcCalculatorService.Calculate(item);
+            <div class="list-group-item border-0">
+                <div class="d-flex">
+                    <img class="img-thumbnail me-3" alt="Histórico" src="icon-no-bg.png" style="height: 64px; width: 64px;">
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex flex-grow-1">
+                                <h6 class="text-start fw-bold me-2">@imcResult.Title @imcResult.Icon</h6>
+                                <span class="text-muted ms-auto">@item.AddedTime</span>
+                            </div>
+                        </div>
+
+                        <h6>@imcResult.Body</h6>
+                        <hr />
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <p class="text-center">Não existem informações para visualização</p>
+    }
+</div>
+
+@code {
+    [Inject] private IImcCalculatorService ImcCalculatorService { get; set; } = null!;
+
+    private ImcHistorySearch ImcHistorySearch { get; set; } = new();
+    private List<ImcCalculator>? FilteredList { get; set; } = new();
+
+    [EditorRequired]
+    [Parameter]
+    public List<ImcCalculator>? Model
+    {
+        get { return _model; }
+        set
+        {
+            _model = value;
+            FilteredList = _model;
+        }
+    }
+
+    private List<ImcCalculator>? _model { get; set; }
+
+    private void OnValidSubmit()
+    {
+        Search();
+    }
+
+    private void Search()
+    {
+        FilteredList = 
+            string.IsNullOrEmpty(ImcHistorySearch.Search) ? 
+                Model : 
+                Model?.Where(x => 
+                        ImcCalculatorService.Calculate(x).Title.Contains(ImcHistorySearch.Search, StringComparison.OrdinalIgnoreCase))  
+                    .ToList();
+    }
+}

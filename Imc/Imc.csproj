@@ -17,4 +17,20 @@
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Pages\History\Components\HistoryList.razor\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Pages\History\Components\HistoryList.razor\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\History\Components\HistoryList.razor\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Pages\History\Components\HistoryList.razor\**" />
+  </ItemGroup>
+
 </Project>

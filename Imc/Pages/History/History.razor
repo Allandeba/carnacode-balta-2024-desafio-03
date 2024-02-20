@@ -1,6 +1,7 @@
 ﻿@page "/history"
 
 @using Imc.Services
+@using Imc.Pages.History.Components
 
 <PageTitle>History</PageTitle>
 
@@ -9,69 +10,20 @@
         <img class="img-thumbnail mb-3" src="icon-no-bg.png" alt="Logo" style="height: 95px; width: 95px;">
         <h1 class="mb-3">Histórico</h1>
     </div>
-
-    <EditForm Model="Model" OnValidSubmit="Pesquisar" FormName="PesquisarHistorico">
-        <InputText class="form-control mb-3" @bind-Value="Model.Search" placeholder="Pesquisar..." />
-    </EditForm>
-
-    <div class="list-group list-group-flush align-items-center">
-        @if (FilteredModelList != null && FilteredModelList.Any())
-        {
-            @foreach (var item in FilteredModelList)
-            {
-                var imcResult = ImcCalculatorService.Calculate(item);
-                <div class="list-group-item border-0">
-                    <div class="d-flex">
-                        <img class="img-thumbnail me-3" alt="Histórico" src="icon-no-bg.png" style="height: 64px; width: 64px;">
-
-                        <div class="row">
-                            <div class="col">
-                                <div class="d-flex flex-grow-1">
-                                    <h6 class="text-start fw-bold me-2">@imcResult.Title @imcResult.Icon</h6>
-                                    <span class="text-muted ms-auto">@item.AddedTime</span>
-                                </div>
-                            </div>
-
-                            <h6>@imcResult.Body</h6>
-                            <hr />
-                        </div>
-                    </div>
-                </div>
-            }
-        }
-        else
-        {
-            <p class="text-center">Não existem informações para visualização</p>
-        }
-    </div>
+    
+    <HistoryList Model="@ModelList" />
 </div>
 
 @code {
     [Inject] private IImcCalculatorService ImcCalculatorService { get; set; } = null!;
-    private Models.ImcHistorySearch Model { get; set; } = new();
+
     private List<ImcCalculator>? ModelList { get; set; }
-    private List<ImcCalculator>? FilteredModelList { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        ModelList = await LocalStorage.GetItemAsync<List<ImcCalculator>>(StorageConstants.Key);
-        if (ModelList != null)
+        ModelList = await LocalStorage
+            .GetItemAsync<List<ImcCalculator>>(StorageConstants.Key);
+        if (ModelList is not null)
             ModelList.Reverse();
-
-        FilteredModelList = ModelList;
-    }
-
-    private void Pesquisar()
-    {
-        if (string.IsNullOrEmpty(Model.Search))
-        {
-            FilteredModelList = ModelList?.ToList();
-            return;
-        }
-        else
-        {
-            FilteredModelList = ModelList!.Where(x => ImcCalculatorService.Calculate(x).Title.ToLower().Contains(Model.Search.ToLower())).ToList();
-
-        }
     }
 }
