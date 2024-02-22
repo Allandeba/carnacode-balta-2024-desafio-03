@@ -1,16 +1,9 @@
 using Blazored.LocalStorage;
+using Imc.Data.Interfaces;
 using Imc.Models;
 using Imc.Shared.Constants;
 
 namespace Imc.Data;
-
-public interface IRepository
-{
-    Task<List<ImcCalculator>?> GetItemListAsync();
-    Task SetItemAsync(IList<ImcCalculator> value);
-}
-
-public interface ILocalStorageRepository : IRepository;
 
 public class LocalStorageRepository : ILocalStorageRepository
 {
