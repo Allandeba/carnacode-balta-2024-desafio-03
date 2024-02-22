@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Imc.Shared.Enums;
 
 public enum EImcStatus
@@ -6,5 +8,6 @@ public enum EImcStatus
     Normal,
     Sobrepeso,
     Obesidade,
+    [Display(Name = "Obesidade grave")]
     ObesidadeGrave
 }

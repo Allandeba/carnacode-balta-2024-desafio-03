@@ -45,8 +45,7 @@ public class ImcCalculatorService : IImcCalculatorService
             imcResult.Body = string.Format(Warning, imcResult.Title);
             imcResult.Status = EStatusImc.Ruim;
         } else {
-            // Todo: Fazer o Display name Extension para enumeradores
-            imcResult.Title = "Obesidade Grave";
+            imcResult.Title = EImcStatus.ObesidadeGrave.GetDisplayName();
             imcResult.Body = string.Format(Warning, imcResult.Title);
             imcResult.Status = EStatusImc.Ruim;
         }
