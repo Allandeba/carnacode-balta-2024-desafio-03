@@ -1,7 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using Imc.Shared.Enums;
 using Imc.Extensions;
-using Microsoft.Extensions.Options;
 using static Imc.Shared.Constants.MessageConstants;
 using static Imc.Shared.Constants.TimeConstants;
 

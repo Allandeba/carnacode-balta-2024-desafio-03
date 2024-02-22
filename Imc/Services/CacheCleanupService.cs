@@ -1,7 +1,6 @@
 using Blazored.LocalStorage;
 using Imc.Models;
 using Imc.Shared.Constants;
-using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.JSInterop;
 
 namespace Imc.Services;
