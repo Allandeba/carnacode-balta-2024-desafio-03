@@ -1,6 +1,7 @@
 ﻿@page "/imc"
 @using Imc.Services;
 @using Imc.Pages.ImcCalculator.Components
+@using Imc.Data
 
 <PageTitle>Cálculo de IMC</PageTitle>
 
@@ -15,13 +16,13 @@
 @code {
     [Inject] private IJSRuntime JsRuntime { get; set; } = null!;
     [Inject] private IImcCalculatorService ImcCalculatorService { get; set; } = null!;
+    [Inject] private ILocalStorageRepository Repository { get; set; } = null!;
+
     private Imc.Models.ImcCalculator Imc { get; set; } = new();
     private ModalDialog _modalDialog = null!;
 
-    private async Task ToCalcExpanationPage()
-    {
-        await JsRuntime.InvokeAsync<object>("open", "https://www.unimedcampinas.com.br/blog/cuidado-continuo/entenda-o-que-e-calculo-imc-e-para-que-serve", "_blank");
-    }
+    private async Task ToCalcExpanationPage() 
+        => await JsRuntime.InvokeAsync<object>("open", "https://www.unimedcampinas.com.br/blog/cuidado-continuo/entenda-o-que-e-calculo-imc-e-para-que-serve", "_blank");
 
     private async Task ToHistoryPageAsync()
     {
@@ -39,9 +40,10 @@
 
     private async Task SaveHistoryAsync()
     {
-        var imcList = await LocalStorage.GetItemAsync<List<Imc.Models.ImcCalculator>>(StorageConstants.Key) ?? new List<Imc.Models.ImcCalculator>();
+        var imcList = await Repository.GetItemListAsync() ?? new List<Imc.Models.ImcCalculator>();
         imcList.Add(Imc);
-        await LocalStorage.SetItemAsync(StorageConstants.Key, imcList);
+        await Repository.SetItemAsync(imcList);
         await ToHistoryPageAsync();
     }
+
 }

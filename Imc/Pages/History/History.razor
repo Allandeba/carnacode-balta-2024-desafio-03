@@ -2,6 +2,7 @@
 
 @using Imc.Services
 @using Imc.Pages.History.Components
+@using Imc.Data
 
 <PageTitle>History</PageTitle>
 
@@ -16,14 +17,12 @@
 
 @code {
     [Inject] private IImcCalculatorService ImcCalculatorService { get; set; } = null!;
-
+    [Inject] private ILocalStorageRepository Repository { get; set; } = null!;
+    
     private List<ImcCalculator>? ModelList { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        ModelList = await LocalStorage
-            .GetItemAsync<List<ImcCalculator>>(StorageConstants.Key);
-        if (ModelList is not null)
-            ModelList.Reverse();
+        ModelList = await Repository.GetItemListAsync();
     }
 }

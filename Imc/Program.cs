@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Imc;
 using Blazored.LocalStorage;
+using Imc.Data;
 using Imc.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -13,6 +14,7 @@ builder.Services.AddScoped(
 );
 builder.Services.AddScoped<ICacheCleanupService, CacheCleanupService>();
 builder.Services.AddScoped<IImcCalculatorService, ImcCalculatorService>();
+builder.Services.AddScoped<ILocalStorageRepository, LocalStorageRepository>();
 
 builder.Services.AddBlazoredLocalStorage();
 
