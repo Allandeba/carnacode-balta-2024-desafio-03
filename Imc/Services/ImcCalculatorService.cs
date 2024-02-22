@@ -1,14 +1,9 @@
+using Imc.Extensions;
 using Imc.Models;
+using Imc.Services.Interfaces;
 using Imc.Shared.Enums;
 
 namespace Imc.Services;
-
-public interface IImcCalculator
-{
-    ImcResult Calculate(ImcCalculator imcCalculator);
-}
-
-public interface IImcCalculatorService : IImcCalculator;
 
 public class ImcCalculatorService : IImcCalculatorService
 {

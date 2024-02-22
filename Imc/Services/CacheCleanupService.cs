@@ -1,14 +1,10 @@
 using Blazored.LocalStorage;
 using Imc.Models;
+using Imc.Services.Interfaces;
 using Imc.Shared.Constants;
 using Microsoft.JSInterop;
 
 namespace Imc.Services;
-
-public interface ICacheCleanupService
-{
-    Task CleanupCacheAsync();
-}
 
 public class CacheCleanupService(IJSRuntime jsRuntime, ILocalStorageService localStorage) : ICacheCleanupService
 {

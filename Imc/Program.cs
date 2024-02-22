@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Imc;
 using Blazored.LocalStorage;
 using Imc.Data;
+using Imc.Data.Interfaces;
 using Imc.Services;
+using Imc.Services.Interfaces;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
