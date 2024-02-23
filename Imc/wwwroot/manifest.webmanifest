@@ -1,7 +1,7 @@
 {
   "name": "Imc Calculator",
-  "short_name": "Imc Calc.",
-  "description": "Simplifique o cálculo de IMC",
+  "short_name": "Imc Calculator",
+  "description": "Simplifique o cálculo do seu IMC",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#2E1462",
