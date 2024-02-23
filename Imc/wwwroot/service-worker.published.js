@@ -53,3 +53,10 @@ async function onFetch(event) {
 
     return cachedResponse || fetch(event.request);
 }
+
+// Force reload on changing apps
+self.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'visible') {
+        window.location.reload();
+    }
+});
