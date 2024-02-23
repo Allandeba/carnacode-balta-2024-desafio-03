@@ -33,7 +33,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-PkEkqik1Gg\/T\/CONg2IwR0cuE7ZFq\/mHE+C+ngL4bSU=",
+      "hash": "sha256-8IiulU4nNMzbbL0XZRc9CN2j\/NeaSFGJMSf2bv99Rn8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -41,7 +41,7 @@
       "url": "_framework\/Blazored.LocalStorage.wasm"
     },
     {
-      "hash": "sha256-oSLsM+YLrXF1iWRoD6vNetcAuhRsUA97GAjnIyB8oRM=",
+      "hash": "sha256-C9eovkPojKHD07mP0IcQWAZcPYy\/H+ubvhqw38JJUBo=",
       "url": "_framework\/Imc.wasm"
     },
     {
@@ -793,13 +793,153 @@
       "url": "img\/windows11\/Wide310x150Logo.scale-400.png"
     },
     {
-      "hash": "sha256-bxdApUSC4gzhnXpk\/nExB+1EaTF4maq7NChFajub\/1w=",
+      "hash": "sha256-5TAUUdYLNQVcsCzgg3Ri3Xj5t5nSwDjSBwbmMolvpCk=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-vYHG7t6PVx2YdE8\/hEGwmh+eeABlT\/FtdpmqvJwPpr8=",
+      "hash": "sha256-l1rQo\/MZXczlnl8JTT9AQtdLvHSb1jsOj7twVys\/2l4=",
       "url": "manifest.webmanifest"
+    },
+    {
+      "hash": "sha256-cd7tczVjhd\/yjVxxxMA6N4IwVM06smvb9tGR8Wf\/yf4=",
+      "url": "splash_screens\/10.2__iPad_landscape.png"
+    },
+    {
+      "hash": "sha256-GPv8sfmaVQuoTvXFTs6KCsbDDOGJk\/+rbXgE1PMYR9w=",
+      "url": "splash_screens\/10.2__iPad_portrait.png"
+    },
+    {
+      "hash": "sha256-nEkhIGCf87JFRKBdNhdH5r0flDx+jbpFXl\/Z+sOME2Y=",
+      "url": "splash_screens\/10.5__iPad_Air_landscape.png"
+    },
+    {
+      "hash": "sha256-dIypRpHG7Yx1dzVs+X5dlGSBlwtYJaUAjkJSqN1DN78=",
+      "url": "splash_screens\/10.5__iPad_Air_portrait.png"
+    },
+    {
+      "hash": "sha256-X+GfwhKqMvqJW8Fg1+H+G4l2bWsu4T13qr+IXwMLyUo=",
+      "url": "splash_screens\/10.9__iPad_Air_landscape.png"
+    },
+    {
+      "hash": "sha256-jOaPV2qQuJ3XZzUQR5K+Dimaz5AZcWSiPOj7Q7y2dTs=",
+      "url": "splash_screens\/10.9__iPad_Air_portrait.png"
+    },
+    {
+      "hash": "sha256-o5IunkD04DxbO8Oy7Zdsx5KeOPrn\/ehjW9XilrK4XAk=",
+      "url": "splash_screens\/11__iPad_Pro__10.5__iPad_Pro_landscape.png"
+    },
+    {
+      "hash": "sha256-Z2yqOMWi5WkX+NIZdaaDUmDSZZfTvoAJ\/gsbJKjOV4M=",
+      "url": "splash_screens\/11__iPad_Pro__10.5__iPad_Pro_portrait.png"
+    },
+    {
+      "hash": "sha256-424EyjZGC\/3R8Yf\/uOLDLSk2G2glCqdI9r7h+3zA1CM=",
+      "url": "splash_screens\/12.9__iPad_Pro_landscape.png"
+    },
+    {
+      "hash": "sha256-waNi2zt9eFlJPSXkOKNW7jfnbv9fRmgiL+kBzgZyLaU=",
+      "url": "splash_screens\/12.9__iPad_Pro_portrait.png"
+    },
+    {
+      "hash": "sha256-7RxVsq8iKHmeQ9Asm\/Rr1XzNytsdIYGOmCDnyANMXLk=",
+      "url": "splash_screens\/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png"
+    },
+    {
+      "hash": "sha256-pTtAdqizTYVFSoB8CuNMNzRZZ4vHRU\/yKCG1UqKyEyU=",
+      "url": "splash_screens\/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png"
+    },
+    {
+      "hash": "sha256-KvPhs4DcCZpSovOCxHp07NVCLSt6w6Lfm9EUhTz5Bps=",
+      "url": "splash_screens\/8.3__iPad_Mini_landscape.png"
+    },
+    {
+      "hash": "sha256-otvl584\/z5WRTaWLHUfdTx+Xla3JUJFnCaxMSPxF3+c=",
+      "url": "splash_screens\/8.3__iPad_Mini_portrait.png"
+    },
+    {
+      "hash": "sha256-qkrcQwvRrmALGOMxTu7+05d9I14fs5OSNwDZjeSafkg=",
+      "url": "splash_screens\/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png"
+    },
+    {
+      "hash": "sha256-aGQajzwFj2dTsbuvm\/H8xUvPOyQO0pFzIycWCeqH05A=",
+      "url": "splash_screens\/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png"
+    },
+    {
+      "hash": "sha256-HdBy7WxW6U4SwE5j72+gnElksorVFvj\/xPfcnM\/HDWs=",
+      "url": "splash_screens\/icon.png"
+    },
+    {
+      "hash": "sha256-qg2bruLZetJhfE4unxR7mb7TRntlPjm08oHej0rw3zw=",
+      "url": "splash_screens\/iPhone_11__iPhone_XR_landscape.png"
+    },
+    {
+      "hash": "sha256-qPFU5rJMvwMk4U4cL0AMd\/lci1gj6VUdgBG\/\/d015aI=",
+      "url": "splash_screens\/iPhone_11__iPhone_XR_portrait.png"
+    },
+    {
+      "hash": "sha256-5bZ78AXvggsCWaj2Zh2uX\/P1DZXHsBV7q+EoOgyEE+o=",
+      "url": "splash_screens\/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png"
+    },
+    {
+      "hash": "sha256-JfFUMZbUOWe2EqlG1Z0BSry9jBrb0JcREoMY5QUuGDc=",
+      "url": "splash_screens\/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png"
+    },
+    {
+      "hash": "sha256-IFXlJPMe7ugcIwpWGJwAitasaDpdiU4nQvHIMjEgzwI=",
+      "url": "splash_screens\/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png"
+    },
+    {
+      "hash": "sha256-AIK4oR1nL5+NNiecq9+Ljn+V+7lZwcVxLOucEOs+l4M=",
+      "url": "splash_screens\/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png"
+    },
+    {
+      "hash": "sha256-0VbPbCmUAWQ8KNJ2KA+Df3HL3eq2eJ8IkMlq9fQXeY4=",
+      "url": "splash_screens\/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png"
+    },
+    {
+      "hash": "sha256-d\/IIY6jF60KaxYecNfPHIipOLtj0BQkXFm3nKeaFDsw=",
+      "url": "splash_screens\/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png"
+    },
+    {
+      "hash": "sha256-wISxm9utihqfacQMXsGF1AxcZxRiuox\/8\/0iAdspJTY=",
+      "url": "splash_screens\/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png"
+    },
+    {
+      "hash": "sha256-JiQZ2A075gXNFvEOZ5FVfqC4xoRE7I+Pg86767Vykrs=",
+      "url": "splash_screens\/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png"
+    },
+    {
+      "hash": "sha256-\/Icg7KJ2dcCdORJtp3rHhzgOgytX4sXwghReghwTBpo=",
+      "url": "splash_screens\/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png"
+    },
+    {
+      "hash": "sha256-TZBPvm2tvagjwXnc8S3D2Kmv6gAxkzBFKIzVj7btVGU=",
+      "url": "splash_screens\/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png"
+    },
+    {
+      "hash": "sha256-QWNEz\/OQbT+W2EOq8IdDa6lngoKkKCs6AsUlrNHyTSQ=",
+      "url": "splash_screens\/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_landscape.png"
+    },
+    {
+      "hash": "sha256-J0I+EPenB+oAHgdpE9u+gsMAnVTiDN1ZWGrH+eRodE8=",
+      "url": "splash_screens\/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_portrait.png"
+    },
+    {
+      "hash": "sha256-nU\/3kJum\/JP\/UuZ\/RRF29iGALEzCtzz83jHpgUXhqJA=",
+      "url": "splash_screens\/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png"
+    },
+    {
+      "hash": "sha256-wVc84bmLG\/RdsNsun6FNIIhjagCpZsyAUkytwI5jJFY=",
+      "url": "splash_screens\/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png"
+    },
+    {
+      "hash": "sha256-bC7lEUpkpVQ2chUDGotmgCBaoUdD6fucsx\/AaUh02rU=",
+      "url": "splash_screens\/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png"
+    },
+    {
+      "hash": "sha256-QzKdb1AkeLJ9Oiat8JqVt5zrzzQ9KZbwjJu1Fn2OIu0=",
+      "url": "splash_screens\/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png"
     }
   ],
-  "version": "dsgCMgMj"
+  "version": "Kdbv5lki"
 };
