@@ -53,4 +53,10 @@ async function onFetch(event) {
 
     return cachedResponse || fetch(event.request);
 }
-/* Manifest version: Kdbv5lki */
+
+// Force reload on changing apps
+self.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'visible') {
+        window.location.reload();
+    }
+});/* Manifest version: 6I9ezlQz */

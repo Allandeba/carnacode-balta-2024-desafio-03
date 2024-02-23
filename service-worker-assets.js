@@ -33,7 +33,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-8IiulU4nNMzbbL0XZRc9CN2j\/NeaSFGJMSf2bv99Rn8=",
+      "hash": "sha256-z8Gkq5edKAmqOy1U9SvSJKVDNt4NfazBXvHESWQKNJQ=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -41,7 +41,7 @@
       "url": "_framework\/Blazored.LocalStorage.wasm"
     },
     {
-      "hash": "sha256-C9eovkPojKHD07mP0IcQWAZcPYy\/H+ubvhqw38JJUBo=",
+      "hash": "sha256-YZLRO7Sh\/fwyJ77Un0mCpZr3m2RleJpKx+MklgxDv9k=",
       "url": "_framework\/Imc.wasm"
     },
     {
@@ -793,8 +793,12 @@
       "url": "img\/windows11\/Wide310x150Logo.scale-400.png"
     },
     {
-      "hash": "sha256-5TAUUdYLNQVcsCzgg3Ri3Xj5t5nSwDjSBwbmMolvpCk=",
+      "hash": "sha256-RBWA4vdowU2AWRvftIihXBPKJ9iiYcXG5evEsDkaIPk=",
       "url": "index.html"
+    },
+    {
+      "hash": "sha256-sAYtui1QtslJ6nSIGBoTodZdPtSHkjvaar4UsTigllg=",
+      "url": "main.js"
     },
     {
       "hash": "sha256-l1rQo\/MZXczlnl8JTT9AQtdLvHSb1jsOj7twVys\/2l4=",
@@ -941,5 +945,5 @@
       "url": "splash_screens\/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png"
     }
   ],
-  "version": "Kdbv5lki"
+  "version": "6I9ezlQz"
 };
