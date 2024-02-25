@@ -21,5 +21,15 @@ public class LocalStorageRepository : ILocalStorageRepository
         return ordenedList;
     }
 
+    public async Task SetItemAsync<T>(string itemKey, T value)
+    {
+        await _localStorage.SetItemAsync(itemKey, value);
+    }
+
+    public async Task<T?> GetItemAsync<T>(string itemKey)
+    {
+        return await _localStorage.GetItemAsync<T>(itemKey);
+    }
+
     public async Task SetItemAsync(IList<ImcCalculator> value) => await _localStorage.SetItemAsync(StorageConstants.Key, value);
 }

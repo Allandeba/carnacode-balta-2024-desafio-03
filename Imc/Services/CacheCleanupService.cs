@@ -25,9 +25,7 @@ public class CacheCleanupService(IJSRuntime jsRuntime, ILocalStorageService loca
                     itemList.Remove(item);
             }
 
-            await localStorage.ClearAsync();
-            if (itemList.Any())
-                await localStorage.SetItemAsync(StorageConstants.Key, itemList);
+            await localStorage.SetItemAsync(StorageConstants.Key, itemList);
         }
         catch (Exception e)
         {

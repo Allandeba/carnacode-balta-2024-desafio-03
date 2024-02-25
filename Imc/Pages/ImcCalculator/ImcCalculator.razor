@@ -35,6 +35,7 @@
         var result = ImcCalculatorService.Calculate(Imc);
         _modalDialog.Title = result.DisplayTitle;
         _modalDialog.Body = result.Body;
+        _modalDialog.ConfirmationButtonCaption = "Registrar medidas";
         await _modalDialog.ShowModalAsync();
     }
 

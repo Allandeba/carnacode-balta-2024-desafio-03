@@ -17,9 +17,11 @@ builder.Services.AddScoped(
 builder.Services.AddScoped<ICacheCleanupService, CacheCleanupService>();
 builder.Services.AddScoped<IImcCalculatorService, ImcCalculatorService>();
 builder.Services.AddScoped<ILocalStorageRepository, LocalStorageRepository>();
+builder.Services.AddScoped<IStorageInitializerService, StorageInitializerService>();
 
 builder.Services.AddBlazoredLocalStorage();
 
 await builder.ResetStorageAsync();
+await builder.InitializePropertiesAsync();
 
 await builder.Build().RunAsync();

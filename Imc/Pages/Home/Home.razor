@@ -1,7 +1,46 @@
 ﻿@page "/"
+@using Imc.Data.Interfaces
 
 <PageTitle>Home</PageTitle>
 
 <h1>Seja bem vindo ao carnacode!</h1>
 
 Acompanhe seu IMC ao longo dos dias.
+
+<ModalDialog ConfirmationActionCallback="ConfirmDialogAsync" @ref="_modalDialog">
+    <button type="button" class="btn btn-secondary" @onclick="NeverShowMessageAgainAsync">Não mostrar novamente</button>
+</ModalDialog>
+<button class="btn btn-primary" onclick="@AbrirModalAsync"></button>
+
+@code {
+    [Inject] private ILocalStorageRepository Repository { get; set; } = null!;
+    [Inject] private IJSRuntime JsRuntime { get; set; } = null!;
+        
+    private ModalDialog _modalDialog { get; set; } = null!;
+
+    private async Task AbrirModalAsync()
+    {
+        var isIos = await JsRuntime.InvokeAsync<bool>("isIos");
+        var isInStandaloneMode = await JsRuntime.InvokeAsync<bool>("isInStandaloneMode");
+        if (isIos && isInStandaloneMode)
+            await UpdateShowInstallMessage(false);
+        
+        var showMessage = await Repository.GetItemAsync<bool>(StorageConstants.ShowInstallMessage);
+        if (!showMessage) return;
+        
+        _modalDialog.Title = "Instale o aplicativo no seu celular";
+        _modalDialog.Body  = "Selecione \"compartilhar\" e clique em \"adicionar para tela inicial\"";
+        _modalDialog.ConfirmationButtonCaption = "Estou ciente";
+        await _modalDialog.ShowModalAsync();
+    }
+
+    private async Task ConfirmDialogAsync() => await Task.Delay(100);
+
+    private async Task NeverShowMessageAgainAsync()
+    {
+        await UpdateShowInstallMessage(false);
+        await _modalDialog.HideModalAsync();
+    }
+
+    private async Task UpdateShowInstallMessage(bool status) => await Repository.SetItemAsync<bool>(StorageConstants.ShowInstallMessage, status);
+}
