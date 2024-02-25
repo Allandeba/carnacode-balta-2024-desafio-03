@@ -33,7 +33,7 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-nZd0TfE5TobKGrArJyychzGLzgj56mWRrEtgmE34U48=",
+      "hash": "sha256-ZZQO8rQjW8E7i\/oblCpcc6QwVQxXMZ5koaucDu0XbSY=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -41,7 +41,7 @@
       "url": "_framework\/Blazored.LocalStorage.wasm"
     },
     {
-      "hash": "sha256-cUi8f8OKZuzKaEoB6VPN8v1n9WpnRtVoIgwHZhcM4l0=",
+      "hash": "sha256-HlU7wk+jLy9UmSyxELbxI6lOXKewbLfkaFIXWeOcPnQ=",
       "url": "_framework\/Imc.wasm"
     },
     {
@@ -165,7 +165,7 @@
       "url": "_framework\/System.ObjectModel.wasm"
     },
     {
-      "hash": "sha256-NgUEw+yK\/F2ZkQ44EezlbIUR\/SX5rOagYhUO2dZ3Kvc=",
+      "hash": "sha256-aZOQMdHiCgJxpiMCJ6I9G3\/tJkje2tS4zx9RQoAppdM=",
       "url": "_framework\/System.Private.CoreLib.wasm"
     },
     {
@@ -207,6 +207,10 @@
     {
       "hash": "sha256-6\/TUxzBCTvkEwuwjGzM6s6heR\/nZKp1KM7aicvJaOhI=",
       "url": "Imc.styles.css"
+    },
+    {
+      "hash": "sha256-11qtkK0VXymJypYEZNQ24C3jHlv\/OoDON+U5q0JS8m0=",
+      "url": "Pages\/Home\/Home.razor.js"
     },
     {
       "hash": "sha256-vbjl5CZH7CMRrkozXH1A5kko9ayZ9JZ770tv1ZSV+sk=",
@@ -933,13 +937,13 @@
       "url": "img\/windows11\/Wide310x150Logo.scale-400.png"
     },
     {
-      "hash": "sha256-8cpvQekKuOLPv4+fTjOlhudFo9T8sMMHWPGP+t\/8VEI=",
+      "hash": "sha256-GUbaMZlCL6e3Tbnk+Pgn7pIFuLA8crG8uVsI0\/8Tlb8=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-fnCfItgYjJcUDaLMy68aF1rrZ7vkhgXkf13IcNS9hKM=",
+      "hash": "sha256-VY\/EWJYxkzNUM5eupsYJkIAmYLQdhEuh2t4j1GTjrKM=",
       "url": "manifest.webmanifest"
     }
   ],
-  "version": "gcUtA9aU"
+  "version": "q1KW0oDn"
 };

@@ -59,4 +59,4 @@ self.addEventListener('visibilitychange', function() {
     if (document.visibilityState === 'visible') {
         window.location.reload();
     }
-});/* Manifest version: gcUtA9aU */
+});/* Manifest version: q1KW0oDn */
