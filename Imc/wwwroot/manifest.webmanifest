@@ -1,6 +1,6 @@
 {
   "name": "Imc Calculator",
-  "short_name": "Imc Calculator",
+  "short_name": "Imc Calc.",
   "description": "Simplifique o cálculo do seu IMC",
   "orientation": "portrait",
   "start_url": ".",
