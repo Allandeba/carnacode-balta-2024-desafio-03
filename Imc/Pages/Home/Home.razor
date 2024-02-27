@@ -27,9 +27,13 @@ Acompanhe seu IMC ao longo dos dias.
     {
         var isIos = await JsRuntime.InvokeAsync<bool>("isIos");
         var isInStandaloneMode = await JsRuntime.InvokeAsync<bool>("isInStandaloneMode");
-        if (isIos && isInStandaloneMode)
-            await UpdateShowInstallMessage(false);
-        
+//        if (isIos && !isInStandaloneMode)
+        if (!isInStandaloneMode)
+            await ShowInstallMessageAsync();    
+    }
+
+    private async Task ShowInstallMessageAsync()
+    {
         var showMessage = await Repository.GetItemAsync<bool>(StorageConstants.ShowInstallMessage);
         if (!showMessage) return;
         
