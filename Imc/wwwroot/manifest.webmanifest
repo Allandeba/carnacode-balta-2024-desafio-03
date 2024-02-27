@@ -3,9 +3,13 @@
   "short_name": "Imc Calc.",
   "description": "Simplifique o cálculo do seu IMC",
   "orientation": "portrait",
-  "start_url": ".",
+  "start_url": "./",
   "display": "standalone",
-  "display_override": ["window-controls-overlay", "standalone", "browser"],
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "browser"
+  ],
   "background_color": "#2E1462",
   "theme_color": "#2E1462",
   "prefer_related_applications": false,
@@ -574,5 +578,9 @@
         }
       ]
     }
-  ]
+  ],
+  "id": "imcCalculator",
+  "dir": "ltr",
+  "scope": "./",
+  "lang": "pt"
 }
