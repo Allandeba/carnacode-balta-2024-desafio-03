@@ -578,5 +578,8 @@
   "id": "imcCalculator",
   "dir": "ltr",
   "scope": "./",
-  "lang": "pt"
+  "lang": "pt",
+  "categories": [
+    "health"
+  ]
 }
